@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Quick embedded fallback style if style.css fails */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .weather-box {
+      margin-top: 20px;
+    }
+
+    .weather-box img {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Weather Dashboard</h1>
+    <label for="cityInput"><strong>Enter a city:</strong></label><br>
+    <input type="text" id="cityInput" placeholder="E.g., Mumbai" />
+    <br>
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weatherResult" class="weather-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
